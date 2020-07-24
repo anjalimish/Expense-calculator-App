@@ -1,0 +1,42 @@
+
+
+table {
+  font-size: 18px;
+  text-align: center;
+  color: black;
+  background-color: #fff;
+  border: 2px solid black;
+}
+
+.white-bg {
+  background-color: #fff;
+}
+
+
+.bg {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.btn-warning {
+  margin-bottom: 20px;
+}
+#status{
+color: black;
+font-size: 16px;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+form {
+  font-size: 24px;
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 2px;
+  margin: 5px;
+}
+#table tr:hover {background-color: rgb(215, 215, 255);}
+
+tr:nth-child(even) {background-color: #f2f2f2;}

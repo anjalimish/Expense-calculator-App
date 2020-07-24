@@ -1,0 +1,82 @@
+<div class="bg">
+    <div class="container" style="margin-top: 80px; color: #fff;">
+        <div class="row">
+          <h1 class="text-center "><i class="	fas fa-donate"></i> Track Your $pending in Group  <i class="	fas fa-donate"></i></h1>
+        </div>
+
+      <div class="row">
+        <table class="table table-bordered table-responsive table-striped " id="table">
+      
+          <thead>
+            <tr>
+              <th style="text-align:center">Group Member Name</th>
+              <th style="text-align:center">Amount Spent </th>
+              <th style="text-align:center">Spent On...?</th>
+              <th style="text-align:center">Date</th>              
+              <th style="text-align:center">Balance</th>              
+              <th style="text-align:center">Status</th>
+              <th style="text-align:center">Delete</th>
+              
+
+            </tr>
+          </thead>
+          
+              <tbody>
+                <tr *ngFor="let item of items">
+                  <td>{{ item.name1 }}</td>  
+                  <td>{{ item.amount }}</td>
+                  <td>{{ item.name }}</td>              
+                  <td>{{ item.date }}</td>                 
+                  <td>{{ item.balance }}</td>
+                  
+                  <td>{{ item.status }}</td> 
+                  <td><a class="btn btn-danger" (click)="deleteItem(item)"><i class="">Delete</i></a></td>
+                  
+                </tr>
+              </tbody>
+        </table>
+      </div>
+
+      <div class="row">
+        <h2>Total spent: Rs {{ showTotal() }}</h2>
+      </div>
+
+      
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          
+          <form action="POST" (ngSubmit)="addItem()" class="maven-pro">
+            <div class="form-group">
+              <label for="description">Group Member Name</label>
+              <input type="text" class="form-control" id="name1" name="name1" placeholder="Enter Name" [(ngModel)]="newItem.name1">
+            </div>
+            <div class="form-group">
+              <label for="amount">Amount</label>
+              <input type="text" class="form-control" id="amount" name="amount" placeholder="Amount spent.." [(ngModel)]="newItem.amount" autofocus required ng-minlength="1">
+            </div>
+            <div class="form-group">
+              <label for="description">What did you spend on?</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Description" [(ngModel)]="newItem.name">
+            </div>
+            <div class="form-group">
+              <label for="date">Date</label>
+              <input type="date" class="form-control" id="date" name="date" placeholder="Date" [(ngModel)]="newItem.date">
+            </div>
+            <div class="form-group">
+              <label for="amount">Balance</label>
+              <input type="text" class="form-control" id="balance" name="balance" placeholder="Amount balance" [(ngModel)]="newItem.balance" autofocus required ng-minlength="1">
+            </div>
+          
+            <div class="form-group">
+              <label for="description">Status</label>
+              <input type="text" class="form-control" id="status" name="status" placeholder="Status" [(ngModel)]="newItem.status">
+            </div>
+           
+            <button class="btn btn-warning"><i class="fas fa-plus"></i>Add Details</button>
+          </form>
+        </div>
+      </div>
+
+      </div>
+</div>
+
